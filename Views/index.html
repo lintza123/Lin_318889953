@@ -6,25 +6,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="js/staticFunctions.js" defer></script>
-  <script src="js/index.js" defer></script>
-  <script src="js/object_list.js" defer></script>
+  <link rel="stylesheet" href="../Static/css/styles.css">
+  <script src="../Static/js/globalFuncs.js" defer></script>
+  <script src="../Static/js/index.js" defer></script>
+  <script src="../Static/js/object_list.js" defer></script>
 </head>
 
 <body>
 
 <div class="Grid-Index">
 
-  <div id="TitleIndex">
-    <h1 class="Heading"><span dir = ltr>YourTurn</span></h1>
-  </div>
 
   <div id="logoIndex">
-    <img src="img/hands_logo.png" width="400" alt="Web Logo">
+    <img class="indexAnimation" src="../Static/img/hands_logo.png" width="400" alt="Web Logo">
   </div>
 
   <div id = "User_Password" >
+    <div id="TitleIndex">
+      <h1 class="Heading"><span dir = ltr>YourTurn</span></h1>
+    </div>
     <form class="regForm" name="Reg_Form">
 
       <div class="msgForUser"></div>
@@ -46,18 +46,17 @@
   </div>
 
   <div id="NewUserButton">
-    <button>!משתמש חדש? הירשם עכשיו</button>
+    <button>משתמש חדש? הירשם עכשיו!</button>
   </div>
+  <br>
 
   <div id="amuta">
-    <a href="Opening_Association_User.html"><img src="img/A%20small%20logo%20association.png" width="150" alt="A small logo association"></a>
+    <a href="opening_association_user.html"><img class="imgAnimation" src="../Static/img/A%20small%20logo%20association.png" width="150" alt="A small logo association"></a>
   </div>
   <div id="mitnadev">
-    <a href="Opening_Vol_User.html"><img src= "img/Photo%20of%20a%20volunteer.png" width="150" alt="Photo of a volunteer"></a>
+    <a href="opening_vol_user.html"><img class="imgAnimation" src= "../Static/img/Photo%20of%20a%20volunteer.png" width="150" alt="Photo of a volunteer"></a>
   </div>
 
 </div>
-
 </body>
-
 </html>

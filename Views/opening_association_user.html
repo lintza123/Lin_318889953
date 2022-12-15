@@ -6,8 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="js/OpeningUser.js" defer></script>
+  <link rel="stylesheet" href="../Static/css/styles.css">
+  <script src="../Static/js/object_list.js"></script>
+  <script src="../Static/js/globalFuncs.js" defer></script>
+  <script src="../Static/js/opening_user_valid.js" defer></script>
 </head>
 
 <body dir="ltr">
@@ -15,73 +17,62 @@
 <div class="Grid-Container">
 
   <div>
-    <img class="logoSide" src="img/hands_logo.png" width="150" alt="Web Logo">
+    <img class="logoSide" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
   </div>
   <div id="TitleOpenAssociation">
     <h1 class="Heading">Your Association Is Important To Us!</h1>
   </div>
 
   <form dir="rtl" class="regForm" name="Reg_Form">
-    <div class="msgForUser"></div>
-    <div class="Inp_right">
-      <label>שם העמותה* : </label>
+
+    <label>שם העמותה* :
       <input type="text" class="FullName">
-    </div>
-    <div class="Inp_right">
-      <div class="msgPhone"></div>
-      <label>טלפון* : </label>
+      <div class="msgForUser"></div>
+    </label>
+
+    <label>טלפון* :
       <input type="tel" class="PhoneNumber">
-    </div>
-    <div class="Inp_right">
-      <div class="msgMail"></div>
-      <label>מייל* : </label>
+      <div class="msgPhone"></div>
+    </label>
+
+    <label>מייל* :
       <input type="text" class="Mail">
-    </div>
-    <div class="Inp_right">
-      <label>מיקום* :</label>
+      <div class="msgMail"></div>
+    </label>
+
+    <label>מיקום* :
       <input type="text" id="LocationAssociation">
-    </div>
-    <div class="Inp_right">
-      <label>תאריך הקמה :</label>
+    </label>
+
+    <label>תאריך הקמה* :
       <input type="date" id="FoundationDate">
-    </div>
-    <div class="Inp_right">
-      <label>כמות פעילים :</label>
+      <div id="msgFund"></div>
+    </label>
+
+    <label>כמות פעילים :
       <input type="number" id="ActiveVol">
-    </div>
-    <div class="Inp_right">
-      <div class="msgUser"></div>
-      <label>שם משתמש* :</label>
+    </label>
+
+    <label>שם משתמש* :
       <input  type="text" class="UserName">
-    </div>
-    <br>
-    <div dir="rtl" class="Inp_right">
-      <div class="msgPass"></div>
-      <label>סיסמה*:</label>
-      <div class="msgPass"></div>
+      <div class="msgUser"></div>
+      <div class="checkMsgUser"></div>
+    </label>
+
+    <label>סיסמה*:
       <input type="password" class="Password">
-    </div>
-    <br>
-    <div class="Inp_right">
-      <label>תיאור העמותה* : </label>
-      <br>
-      <textarea class=Description cols="7" rows="7" placeholder="תאר את העמותה שלך..."></textarea>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="Inp_right">
-      <div id="msgURL"></div>
-      <label>*URL:</label>
+      <div class="msgPass"></div>
+    </label>
+
+    <label>תיאור העמותה* : </label>
+    <textarea class=Description cols="4" rows="4" placeholder="תאר את העמותה שלך..."></textarea>
+
+    <label>*URL:
       <input type="text" id="URLAso">
-    </div>
-    <br>
-    <div class="Inp_right">
-      <label>סוג עמותה :</label>
+      <div id="msgURL"></div>
+    </label>
+
+    <label>סוג עמותה :
       <select id="Type">
         <option>בעלי חיים</option>
         <option>קשישים</option>
@@ -91,20 +82,17 @@
         <option>משפחות נזקקות</option>
         <option>אחר</option>
       </select>
-    </div>
-    <div class="Inp_right">
-      <label>שעות פעילות* :</label>
-      <label label class="MoveAside1">ימים:</label>
-      <input type="text" id="AssociationDays">
-      <br><label class="MoveAside">שעות:</label>
-      <input type="time" id="AssociationHours">
-    </div>
-    <div class="LogoMoveDown">
-      <label>לוגו:</label>
-      <span class="upload_image">
-            <img src="img/plus.png" width="35">
-          </span>
-    </div>
+    </label>
+
+    <label class="date-grid">שעות פעילות* :
+      <span>
+          <span>ימים :</span>
+          <input type="text" id="AssociationDays">
+         <span>שעות :</span>
+          <input type="time" id="AssociationHours">
+        </span>
+    </label>
+
     <input type="submit" value="!Join Us" class="submit-button">
   </form>
 

@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
   <meta charset="UTF-8">
   <title>Volunteers_Home_Screen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="js/staticFunctions.js" defer></script>
+  <link rel="stylesheet" href="../Static/css/styles.css">
+  <script src="../Static/js/globalFuncs.js" defer></script>
+  <script src="../Static/js/greet_msg.js" defer></script>
 </head>
 
-<body dir="ltr">
+<body dir="rtl">
 
-<div class="Grid-Container">
+<header class="header">
 
-  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
+  <label id="greetMsg"></label>
 
   <nav>
     <button><a href="index.html">התנתק</a></button>
-    <button><a href="Vol_Portal.html">צפייה בפורטל האישי</a></button>
-    </nav>
+    <button class="goToPortal">צפייה בפורטל האישי</button>
+  </nav>
 
-  <div class="TitleVolHomePage">
-    <h1 dir="rtl" class="Heading">איך תבחר לשנות את העולם לטובה היום?</h1>
-  </div>
+  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
 
-  <div id="Options">
-    <div>
-      <a href="Looking_For_Volunteering.html">
-        <img id="imgRight" src ="img/hetnadvot.png" width="350">
-      </a>
+</header>
 
-      <div id="OptLeft">
-        <a href="Creating_Voluntary_Activity.html">
-          <img id="imgLeft" src="img/HakamtPailot.png" width="350">
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="TitlePage">
+  <h1 class="Heading">איך תבחר לשנות את העולם לטובה היום?</h1>
+</div>
 
+<div id="Options">
+  <a href="looking_for_volunteering.html">
+    <img id="imgRight" src ="../Static/img/hetnadvot.png" width="350" alt="">
+  </a>
+
+  <a href="creating_voluntary_activity.html">
+    <img id="imgLeft" src="../Static/img/HakamtPailot.png" width="350" alt="">
+  </a>
 </div>
 
 </body>
 </html>
-
-
