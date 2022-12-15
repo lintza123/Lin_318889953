@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creating_Voluntary_Activity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/staticFunctions.js" defer></script>
+  <script src="js/Creating_Voluntary_Activity.js" defer></script>
+</head>
+<body dir="ltr">
+
+<div class="Grid-Container">
+  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
+  <nav>
+    <ul>
+      <li><a href="Volunteers_Home%20_Screen.html"><img class="returnHomePage" src="img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage"></a></li>
+      <li><button><a href="index.html">התנתק</a></button></li>
+      <li><button><a href="Vol_Portal.html">צפייה בפורטל האישי</a></button></li>
+    </ul>
+  </nav>
+
+  <div class="HeadingGeneral">
+    <h1 dir="rtl" class="Heading">תוביל את המהפכה בדרך שלך!</h1>
+  </div>
+
+  <form dir="rtl" id="EventForm">
+
+    <div class="Inp_right">
+      <div class="msg"></div>
+      <label>שם האירוע *:</label>
+      <input type="text" id="EventTitle">
+    </div>
+    <div class="Inp_right">
+      <label>שם היוזם (אופציונלי):</label>
+      <input type="text" id="EventCreator">
+    </div>
+    <div class="Inp_right">
+      <label>מתאריך *:</label>
+      <input type="date" id="StartDate">
+      <label>עד תאריך *:</label>
+      <input type="date" id="EndDate">
+    </div>
+    <div class="Inp_right">
+      <label>שעת התחלה *:</label>
+      <input type="time" id="StartTime">
+      <label>שעת סיום *:</label>
+      <input type="time" id="EndTime">
+    </div>
+    <div class="Inp_right">
+      <label>מיקום *:</label>
+      <input type="text" id="Location">
+    </div>
+    <div class="Inp_right">
+      <label>כמות מתנדבים :</label>
+      <input type="number" id="MaxVol" placeholder="Maximum">
+      -
+      <input type="number" id="MinVol" placeholder="Minimum">
+    </div>
+    <div class="Inp_right">
+      <label>ציוד נדרש :</label>
+      <input type="text" id="RequiredEquip" placeholder="XXXX,XXXX,XXXX...">
+    </div>
+    <div class="Inp_right">
+      <label>הערות נוספות :</label>
+      <input type="text" id="Notes">
+    </div>
+    <label>מטרת האירוע :</label>
+    <div>
+      <textarea name="Goal" cols="7" rows="7" placeholder="ספר על המטרה שלך..." id="goalEvent"></textarea>
+    </div>
+    <input type="submit"  value="!Post&Impact" class="submit-button">
+  </form>
+
+  <img id="angelVee" src="img/postAndImpact.png" width="150">
+
+</div>
+
+
+</body>
+</html>

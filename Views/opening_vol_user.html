@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New_Volunteer_User</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/OpeningUser.js" defer></script>
+  <script src="js/staticFunctions.js" defer></script>
+</head>
+
+<body dir="ltr">
+
+<div class="Grid-Container">
+
+  <div>
+    <img class="logoSide" src="img/hands_logo.png" width="150" alt="Web Logo">
+  </div>
+  <div id="TitleOpenAssociation">
+    <h1 class="Heading">It’s YourTurn To Make An Impact!</h1>
+  </div>
+
+  <form dir="rtl" class="regForm" name="Reg_Form">
+    <div class="msgForUser"></div>
+    <div class="Inp_right">
+      <label>שם מלא* : </label>
+      <input type="text" class="FullName">
+    </div>
+    <div class="Inp_right">
+      <div class="msgPhone"></div>
+      <label>טלפון* : </label>
+      <input type="tel" class="PhoneNumber">
+    </div>
+    <div class="Inp_right">
+      <div class="msgMail"></div>
+      <label>מייל* : </label>
+      <input type="text" class="Mail">
+    </div>
+    <div class="Inp_right">
+      <label>גיל* : </label>
+      <input type="number" id="Age">
+    </div>
+    <div class="Inp_right">
+      <div class="msgUser"></div>
+      <label>שם משתמש* : </label>
+      <input type="text" class="UserName">
+    </div>
+    <div dir="rtl" class="Inp_right">
+      <div class="msgPass"></div>
+      <label>סיסמה* :</label>
+      <input type="password" class="Password">
+    </div>
+    <div class="Inp_right">
+      <label>מין :</label>
+      <select id="Gender">
+        <option value="Male">זכר</option>
+        <option value="Female">נקבה</option>
+        <option value="other">אחר</option>
+      </select>
+    </div>
+    <div class="Inp_right">
+      <label dir="rtl">תיאור קצר על עצמך :</label>
+      <input type="text" class="Description">
+    </div>
+    <br>
+    <br>
+    <div class="Inp_right">
+      <label>תמונת פרופיל:</label>
+      <span class="upload_image">
+            <img src="img/plus.png" width="35">
+          </span>
+    </div>
+    <input type="submit" value="!Join Us" class="submit-button" id="volSub">
+  </form>
+
+</div>
+</body>
+</html>

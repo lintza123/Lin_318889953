@@ -1,0 +1,517 @@
+*{
+  direction: rtl;
+}
+body {
+  margin: 0;
+  background-color: #c1e7f1;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c4c7c;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px black;
+  border-radius: 5px;
+}
+.header {
+  display: grid;
+  grid-template-columns: max-content auto min-content;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.TitlePage{
+  text-align: center;
+}
+
+label {
+  color: #1c4c7c;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 1fr min-content;
+  gap: 0 30px;
+  text-align: right;
+}
+
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #f3ccd2;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 5rem;
+}
+
+input {
+  color: black;
+  background-color: #d9d1d1;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 5px;
+  border: 2px solid #000000;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+textarea{
+  color: black;
+  background-color: #d9d1d1;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  width: 60%;
+}
+
+.error{
+  position: absolute;
+  display: block;
+  color: white;
+  background-color: darkred;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 2px;
+  font-family: Calibri, sans-serif;
+  top: -20px;
+}
+.successes{
+  position: absolute;
+  display: block;
+  background-color: darkgreen;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: Calibri, sans-serif;
+  top: -20px;
+}
+
+button {
+  color: #1c4c7c ;
+  background-color: #f8bca4;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  cursor: pointer;
+  border-radius: 20px;
+  border: solid black 2px;
+  padding: 1% 1% 1% 1%;
+}
+
+button:hover{
+  background-color: #1c4c7c;
+  color: #f8bca4;
+  transition: .3s ease-in;
+  transform: scale(1.05);
+}
+
+button:hover a {
+  color: #f8bca4;
+}
+
+.submit-button{
+  color: #1c4c7c;
+  background-color: #f8bca4;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  margin: 3% 0;
+  padding: 1% 1% 1% 1%;
+  text-align: center;
+}
+
+.submit-button:hover{
+  background-color: #1c4c7c;
+  color: #f8bca4;
+  transition: .3s ease-in;
+  transform: scale(1.05);
+}
+
+.submit-button:hover a {
+  color: #f8bca4;
+}
+
+select{
+  min-width: 158px;
+  color: black;
+  background-color: #d9d1d1;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.Heading{
+  color: #1c4c7c;
+  font-size: 56px;
+  font-family: 'Suez One', serif;
+  display: block;
+  text-align: center;
+}
+
+a:link{
+  color: #1c4c7c;
+}
+a:visited{
+  color: #1c4c7c;
+}
+a{
+  font-size: 26px;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.GoBackToSearchLogo{
+  grid-column: span 1;
+  margin-left: 95%;
+  margin-top: 2%;
+}
+
+/**Grid index.html**/
+.Grid-Index{
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(2, min-content);
+  justify-content: center;
+  align-items: center;
+  gap: 50px 30px;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+}
+#TitleIndex{
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#logoIndex{
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+#User_Password{
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+#NewUserButton{
+  grid-column: 1/-1;
+  text-align: center;
+  align-self: baseline;
+}
+
+#amuta{
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+}
+
+#mitnadev{
+  grid-column: 1;
+  grid-row: 2;
+  text-align: center;
+}
+/**/
+
+.logoSide{
+  grid-column: span 1;
+}
+
+#Options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#Searching{
+  display: flex;
+  align-content: center;
+  line-height: 2rem;
+}
+
+#Category{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#Category label {
+  display: block;
+  text-align: center;
+}
+
+.BorderContent {
+  border: black 2px dashed;
+  border-radius: 5px;
+  margin-left: 85px;
+  margin-right: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.Tbl_for_Users{
+  grid-column: span 6;
+  margin: 1%;
+}
+
+.Tbl_for_Users .Tbl_Cells .clickable {
+  cursor: pointer;
+}
+
+.Tbl_Cells{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+.Tbl_Cells>span{
+  margin: 1% 1% 1% 1%;
+}
+.Cell_Header{
+  background-color: #1c4c7c;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+.Cell_Info_lightBlue{
+  background-color: lightsteelblue;
+  color: black;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+.Cell_Info_DarkBlue{
+  background-color: cornflowerblue;
+  color: black;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+
+.ButtonPlacement {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.returnHomePage{
+  margin-left: 100px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.goToPortal {
+  cursor: pointer;
+}
+
+nav>button{
+  margin-top: -2%;
+}
+
+.Tbl_for_Vol{
+  grid-column: span 8;
+  margin: 1%;
+}
+.Head_Cell{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+}
+.Head_Cell>span{
+  margin: 1% 1% 1% 1%;
+}
+
+.Tbl_for_Reg{
+  grid-column: span 9;
+  margin: 1%;
+}
+.HeadCell_Reg{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+}
+.HeadCell_Reg>span{
+  margin: 1% 1% 1% 1%;
+}
+
+.Two_Tbl{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.Tbl_Cells2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.Tbl_Cells2>span{
+  margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.CreateAndRegEventButton{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  margin-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*Functions*/
+
+#makeTheWorldBetter{
+  text-align: center;
+  background-color: #f8bca4;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#approveChanges{
+  text-align: center;
+  background-color: darkseagreen;
+  color: black;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.msgFormat{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#saveChanges{
+  text-align: center;
+  background-color: darkseagreen;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#removeFromList{
+  display: flex;
+  justify-content: center;
+  background-color: indianred;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#saveChangesAso{
+  text-align: center;
+  background-color: darkseagreen;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+#removeFromListAso{
+  text-align: center;
+  background-color: indianred;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: 1S;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#greetMsg{
+  background-color: lightpink;
+  border-radius: 5px;
+  font-size: 45px;
+  margin-right: 15px;
+  display: block;
+}
+
+.date-grid {
+  grid-template-columns: repeat(4, max-content);
+}
+
+.labelCenter {
+  text-align: center;
+  display: block;
+
+}
+/*Animations with KeyFrames*/
+
+.imgAnimation:hover {
+  cursor: pointer;
+  animation: itemMove .5s infinite alternate;
+}
+@keyframes itemMove {
+  0%   {
+    transform: scale(1);
+  }
+  100%  {
+    transform: scale(1.1);
+  }
+}
+
+.indexAnimation {
+  -webkit-animation: mover .8s infinite  alternate;
+  animation: mover .8s infinite  alternate;
+}
+.indexAnimation {
+  -webkit-animation: mover .8s infinite  alternate;
+  animation: mover .8s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
