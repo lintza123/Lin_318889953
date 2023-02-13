@@ -1,0 +1,6 @@
+﻿EventNumber,EventName,Purpose,InitiatorName,StartDate,EndDate,BeginningTime,EndTime,Location,MinimumVolunteers,MaximumVolunteers,RequiredEquipment,Notes,PhoneUser,VolCreate,AsoCreate
+1,Car wash for charity,Raising funds for families in need by washing cars,Lin Tzadikaryo,2023-12-12,2023-12-12,08:00,12:30,Givatayim Mall parking lot,10,50,Soap cloths sponges…,,054-9495349,1,0
+2,Coloring the playground,Breathe new life into the neglected and old playground,Moti Cohen,2023-12-20,2023-12-23,16:00,19:00,Meuf neighborhood Arad,15,40,Paint brushes different colors for painting,Three days dedicated to delighting the children of the neighborhood in a beautiful new playground,054-6543322,1,0
+3,Donating clothes,Collecting clothes to give to families in need,David Cohen,2023-12-13,2023-12-14,17:00,20:00,National Park Ramat Gan,10,100,Shirts shoes pants and more,,054-7777777,1,0
+4,Visiting children's department,A visit to the children's department at Soroka Hospital,Maya Lev,2023-03-12,2023-03-12,13:00,16:00,Soroka Hospital Beer Sheva,5,25,,,054-1234567,1,0
+5,Adoption Day,Adopt a new family member,Be'er Sheva Loves Animals,2023-03-14,2023-03-14,10:00,19:00,Writers Park Be'er Sheva,5,100,,Let's adopt a new family member,054-8901234,0,1

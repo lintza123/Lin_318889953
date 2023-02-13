@@ -18,58 +18,6 @@ const hide=(e)=>{
   e.style.pointerEvents="none";
 }
 
-/*Validations for User Exists*/
-
-function userExists(e){
-  let isExist = false;
-  console.log(e);
-  volunteers.forEach(function (user){
-    if(user.UserName === e){
-      console.log(true);
-      isExist = true;
-    }
-  })
-  return isExist;
-}
-
-function userMatchesPassword(e, p){
-  let isMatch = false;
-  console.log(e);
-  console.log(p);
-  volunteers.forEach(function (user){
-    if(user.UserName===e && user.Password===p){
-      console.log(true);
-      isMatch = true;
-    }
-  })
-  return isMatch;
-}
-
-function userAsoExists(e){
-  let isExist = false;
-  console.log(e);
-  associations.forEach(function (user){
-    if(user.UserName === e){
-      console.log(true);
-      isExist = true;
-    }
-  })
-  return isExist;
-}
-
-function userMatchesPasswordAso(e, p){
-  let isMatch = false;
-  console.log(e);
-  console.log(p);
-  associations.forEach(function (user){
-    if(user.UserName===e && user.Password===p){
-      console.log(true);
-      isMatch = true;
-    }
-  })
-  return isMatch;
-}
-
 const elements = document.querySelectorAll(".returnHomePage, .goToPortal");
 if (elements.length > 0) {
   elements.forEach(element => {
@@ -88,4 +36,9 @@ if (elements.length > 0) {
       }
     });
   })
+}
+
+function logout() {
+  localStorage.clear();
+  window.location = 'index.html';
 }

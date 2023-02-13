@@ -6,38 +6,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/greet_msg.js" defer></script>
-  <script src="../Static/js/globalFuncs.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/greet_msg.js" defer></script>
 </head>
 
 <body>
 
-<header class="header">
-  <label id="greetMsg"></label>
-  <nav>
-    <button><a href="index.html">התנתק</a></button>
-  </nav>
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
-</header>
+  <header class="header">
+    <label id="greetMsg"></label>
+    <nav>
+      <button onclick="logout()">התנתק</button>
+    </nav>
+    <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
+  </header>
+  
+  <div class="TitlePage">
+    <h1 class="Heading">פורטל הפעולות הראשי שלך!</h1>
+  </div>
+  
+  <div class="BorderContent">
+    <br>
+    <a href="http://localhost:3000/contact_us"><button>צור קשר איתנו</button></a>
+    <a href="http://localhost:3000/looking_for_volunteering"><button>הירשם לאירוע קהילתי</button></a>
+    <a href="http://localhost:3000/creating_voluntary_activity"><button>צור אירועי קהילתי לקידום העמותה שלך</button></a>
+    <a href="http://localhost:3000/events_status"><button>צפה במצב האירועים שלך</button></a>
+    <br>
+  </div>
+  <br>
 
-<div class="TitlePage">
-  <h1 class="Heading">פורטל הפעולות הראשי שלך!</h1>
-</div>
+    <script src="js/globalFuncs.js" defer></script>
 
-<div class="BorderContent">
-  <br>
-  <a href="watch_your_volunteers.html"><button>צור קשר עם המתנדבים שלך</button></a>
-  <a href="contact_us.html"><button>צור קשר איתנו</button></a>
-  <br>
-  <br>
-  <a href="signUp_event.html"><button>הירשם לאירוע קהילתי</button></a>
-  <a href="creating_voluntary_activity.html"><button>צור אירועי קהילתי לקידום העמותה שלך</button></a>
-  <a href="events_status.html"><button>צפה במצב האירועים שלך</button></a>
-  <br>
-</div>
-<br>
-
+    <!--Check the user is Aso user-->
+    <script>
+      if (localStorage.getItem('loggedInUser')) {
+      const loggedInUserType = localStorage.getItem('loggedInUser');
+      if (loggedInUserType !== 'aso') {
+        alert('You are not authorized for this screen');
+        logout();
+      }
+    }
+  else {
+        logout();
+    }
+  </script>
+    
 </body>
 </html>
 

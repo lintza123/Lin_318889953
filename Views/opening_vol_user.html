@@ -6,52 +6,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/object_list.js"></script>
-  <script src="../Static/js/globalFuncs.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
   <script src="../Static/js/opening_user_valid.js" defer></script>
 
 </head>
 
 <body>
 <header class="header">
-  <img class="logoSide" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+  <img class="logoSide" src="img/hands_logo.png" width="150" alt="Web Logo">
 </header>
 
 <div class="TitlePage">
   <h1 class="Heading">!It’s YourTurn To Make An Impact</h1>
 </div>
 
-<form class="regForm" name="Reg_Form">
+<form action="/signUp" method="post" class="regForm" name="Reg_Form">
 
   <label>שם מלא* :
-    <input type="text" class="FullName">
+    <input type="text" class="FullName" required>
     <div class="msgForUser"></div>
   </label>
 
 
   <label>טלפון* :
-    <input type="tel" class="PhoneNumber">
+    <input type="tel" class="PhoneNumber" required>
     <div class="msgPhone"></div>
   </label>
 
   <label>מייל* :
-    <input type="text" class="Mail">
+    <input type="text" class="Mail" required>
     <div class="msgMail"></div>
   </label>
 
   <label>גיל* :
-    <input type="number" id="Age">
+    <input type="number" id="Age" required>
   </label>
 
   <label>שם משתמש* :
-    <input type="text" class="UserName">
+    <input type="text" class="UserName" required>
     <div class="msgUser"></div>
     <div class="checkMsgUser"></div>
   </label>
 
   <label>סיסמה* :
-    <input type="password" class="Password">
+    <input type="password" class="Password" required>
     <div class="msgPass"></div>
   </label>
 
@@ -71,5 +69,5 @@
 </form>
 <br>
 
-</body>
+<script src="js/globalFuncs.js"></script></body>
 </html>

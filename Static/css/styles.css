@@ -27,6 +27,13 @@ body {
   text-align: center;
 }
 
+h3{
+  color: #1c4c7c;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+
 label {
   color: #1c4c7c;
   font-size: 26px;
@@ -73,7 +80,7 @@ input {
   border: 2px solid #000000;
 }
 
-form{
+form, #EventForm{
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -346,7 +353,7 @@ nav>button{
 }
 .Head_Cell{
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-template-columns: repeat(9,1fr);
 }
 .Head_Cell>span{
   margin: 1% 1% 1% 1%;
@@ -365,18 +372,24 @@ nav>button{
 }
 
 .Two_Tbl{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 15px auto;
 }
 
-.Tbl_Cells2{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+.Tbl_Cells2 {
+    display: grid;
+  grid-template-columns: repeat(4,1fr);
 }
-.Tbl_Cells2>span{
+
+.Tbl_Cells3{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.Tbl_Cells2>span, .Tbl_Cells3>span{
   margin: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -395,20 +408,7 @@ nav>button{
   text-align: center;
   background-color: #f8bca4;
   border-radius: 5px;
-  visibility: hidden;
   transition: 1S;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#approveChanges{
-  text-align: center;
-  background-color: darkseagreen;
-  color: black;
-  border-radius: 5px;
-  visibility: hidden;
-  transition: 1S;
-  opacity: 0;
   pointer-events: none;
 }
 

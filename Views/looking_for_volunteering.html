@@ -6,9 +6,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/globalFuncs.js" defer></script>
-  <script src="../Static/js/greet_msg.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/looking_for_volunteering.js" defer></script>
+  <script src="js/greet_msg.js" defer></script>
 </head>
 
 <body>
@@ -16,11 +16,11 @@
 <header class="header">
   <label id="greetMsg"></label>
   <nav>
-    <img class="returnHomePage" src="../Static/img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
-    <button><a href="index.html">התנתק</a></button>
+    <img class="returnHomePage" src="img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
+    <button onclick="logout()">התנתק</button>
     <button class="goToPortal">צפייה בפורטל האישי</button>
   </nav>
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
 </header>
 
 <div class="TitlePage">
@@ -29,38 +29,23 @@
 
 <div  dir="rtl" id="Searching">
   <div id="Category">
-    <label> סוג התנדבות:
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px"> בעלי חיים
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px"> קשישים
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">נוער בסיכון
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">מתמודדי נפש
-      <br>
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">צרכים מיוחדים
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">משפחות נזקקות
-      <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">אחר
-    </label>
+    
     <div>
-      <label>שעת התחלה *:
-        <input type="time" name="StartTime">
-      </label>
-      <label>שעת סיום *:
-        <input type="time" name="EndTime">
-      </label>
-    </div>
-    <div>
-      <label>מיקום *:
-        <input type="text" name="Location">
+      <label>תאריך ושעת התחלה *:
+        <input type="datetime-local" name="StartTime" required>
       </label>
     </div>
 
     <div id="vol_search_btn">
-      <a href="volunteer_search_results.html"><button>!Volunteer</button></a>
+      <button onclick="search(event)">!חפש התנדבויות</button>
       <div id="vol_search_symbol">
-        <img src="../Static/img/handRight.png" width="150" alt="">  <img src="../Static/img/handLeft.png" width="150" alt="">
+        <img src="img/handRight.png" width="150" alt="">  <img src="img/handLeft.png" width="150" alt="">
       </div>
     </div>
   </div>
 </div>
+
+<script src="js/globalFuncs.js"></script>
 
 </body>
 </html>

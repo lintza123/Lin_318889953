@@ -6,9 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/object_list.js"></script>
-  <script src="../Static/js/globalFuncs.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
   <script src="../Static/js/opening_user_valid.js" defer></script>
 </head>
 
@@ -17,35 +15,35 @@
 <div class="Grid-Container">
 
   <div>
-    <img class="logoSide" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+    <img class="logoSide" src="img/hands_logo.png" width="150" alt="Web Logo">
   </div>
   <div id="TitleOpenAssociation">
     <h1 class="Heading">Your Association Is Important To Us!</h1>
   </div>
 
-  <form dir="rtl" class="regForm" name="Reg_Form">
+  <form dir="rtl" action="/signUp" method="post" class="regForm" name="Reg_Form">
 
     <label>שם העמותה* :
-      <input type="text" class="FullName">
+      <input type="text" class="FullName" required>
       <div class="msgForUser"></div>
     </label>
 
     <label>טלפון* :
-      <input type="tel" class="PhoneNumber">
+      <input type="tel" class="PhoneNumber" required>
       <div class="msgPhone"></div>
     </label>
 
     <label>מייל* :
-      <input type="text" class="Mail">
+      <input type="text" class="Mail" required>
       <div class="msgMail"></div>
     </label>
 
     <label>מיקום* :
-      <input type="text" id="LocationAssociation">
+      <input type="text" id="LocationAssociation" required>
     </label>
 
     <label>תאריך הקמה* :
-      <input type="date" id="FoundationDate">
+      <input type="date" id="FoundationDate" required>
       <div id="msgFund"></div>
     </label>
 
@@ -54,42 +52,42 @@
     </label>
 
     <label>שם משתמש* :
-      <input  type="text" class="UserName">
+      <input  type="text" class="UserName" required>
       <div class="msgUser"></div>
       <div class="checkMsgUser"></div>
     </label>
 
     <label>סיסמה*:
-      <input type="password" class="Password">
+      <input type="password" class="Password" required>
       <div class="msgPass"></div>
     </label>
 
     <label>תיאור העמותה* : </label>
-    <textarea class=Description cols="4" rows="4" placeholder="תאר את העמותה שלך..."></textarea>
+    <textarea class=Description cols="4" rows="4" placeholder="תאר את העמותה שלך..." required></textarea>
 
     <label>*URL:
-      <input type="text" id="URLAso">
+      <input type="text" id="URLAso" required>
       <div id="msgURL"></div>
     </label>
 
     <label>סוג עמותה :
       <select id="Type">
-        <option>בעלי חיים</option>
-        <option>קשישים</option>
-        <option>נוער בסיכון</option>
-        <option>מתמודדי נפש</option>
-        <option>צרכים מיוחדים</option>
-        <option>משפחות נזקקות</option>
-        <option>אחר</option>
+        <option value="Animals">בעלי חיים</option>
+        <option value="Elders">קשישים</option>
+        <option value="Youth at Risk">נוער בסיכון</option>
+        <option value="Mentally Challenged">מתמודדי נפש</option>
+        <option value="Special needs">צרכים מיוחדים</option>
+        <option value="Families in need">משפחות נזקקות</option>
+        <option value="Other">אחר</option>
       </select>
     </label>
 
     <label class="date-grid">שעות פעילות* :
       <span>
           <span>ימים :</span>
-          <input type="text" id="AssociationDays">
+          <input type="text" id="AssociationDays" placeholder="Sunday-Thursday" required>
          <span>שעות :</span>
-          <input type="time" id="AssociationHours">
+          <input type="text" id="AssociationHours" placeholder="08:00-18:00" required>
         </span>
     </label>
 
@@ -97,5 +95,7 @@
   </form>
 
 </div>
+
+<script src="js/globalFuncs.js"></script>
 </body>
 </html>

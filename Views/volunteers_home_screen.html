@@ -6,9 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/globalFuncs.js" defer></script>
-  <script src="../Static/js/greet_msg.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/greet_msg.js" defer></script>
 </head>
 
 <body dir="rtl">
@@ -18,11 +17,11 @@
   <label id="greetMsg"></label>
 
   <nav>
-    <button><a href="index.html">התנתק</a></button>
+    <button onclick="logout()">התנתק</button>
     <button class="goToPortal">צפייה בפורטל האישי</button>
   </nav>
 
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
 
 </header>
 
@@ -31,14 +30,30 @@
 </div>
 
 <div id="Options">
-  <a href="looking_for_volunteering.html">
-    <img id="imgRight" src ="../Static/img/hetnadvot.png" width="350" alt="">
+  <a href="http://localhost:3000/looking_for_volunteering">
+    <img id="imgRight" src ="img/hetnadvot.png" width="350" alt="">
   </a>
 
-  <a href="creating_voluntary_activity.html">
-    <img id="imgLeft" src="../Static/img/HakamtPailot.png" width="350" alt="">
+  <a href="http://localhost:3000/creating_voluntary_activity">
+    <img id="imgLeft" src="img/HakamtPailot.png" width="350" alt="">
   </a>
 </div>
+
+<script src="js/globalFuncs.js"></script>
+
+<!--Check the user is Vol user-->
+<script>
+    if (localStorage.getItem('loggedInUser')) {
+    const loggedInUserType = localStorage.getItem('loggedInUser');
+    if (loggedInUserType !== 'vol') {
+      alert('You are not authorized for this screen');
+      logout();
+    }
+  }
+else {
+      logout();
+  }
+</script>
 
 </body>
 </html>

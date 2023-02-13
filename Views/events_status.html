@@ -6,21 +6,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/greet_msg.js" defer></script>
-  <script src="../Static/js/globalFuncs.js" defer></script>
-  <script src="../Static/js/event_status.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/greet_msg.js" defer></script>
+  <script src="js/event_status.js" defer></script>
 </head>
 
 <body>
 <header class="header">
   <label id="greetMsg"></label>
   <nav>
-    <img class="returnHomePage" src="../Static/img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
-    <button><a href="index.html">התנתק</a></button>
+    <img class="returnHomePage" src="img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
+    <button onclick="logout()">התנתק</button>
     <button class="goToPortal">צפייה בפורטל האישי</button>
   </nav>
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
 </header>
 
 <div class="TitlePage">
@@ -30,74 +29,40 @@
 
 <div class="Two_Tbl">
 
+  <h3>אירועים אליהם נרשמת</h3>
+
   <div class="Tbl_Create_Event">
-    <div  class="Tbl_Cells2">
-      <span class="Cell_Header">בחר</span>
-      <span class="Cell_Header">שם האירוע אותו יצרת</span>
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
+    <div dir="rtl" class="Tbl_Cells2">
+    <span class="Cell_Header">עמותה\מארגן</span>
+    <span class="Cell_Header">תאריך</span>
+    <span class="Cell_Header">שעת התחלה</span>
+    <span class="Cell_Header"></span>
     </div>
   </div>
+
+  <br><br>
+  <h3>אירועים שיצרת</h3>
 
   <div class="Tbl_Reg_Event">
-    <div dir="rtl" class="Tbl_Cells2">
-      <span class="Cell_Header">בחר</span>
-      <span class="Cell_Header">שם האירוע אליו נרשמת</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_DarkBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_DarkBlue">XXXXXXX</span>
-
-      <span class="Cell_Info_lightBlue"><input type="radio" checked="checked" name="remember" style="margin-bottom:15px"></span>
-      <span class="Cell_Info_lightBlue">XXXXXXX</span>
+    <div dir="rtl" class="Tbl_Cells3">
+    <span class="Cell_Header">נושא ההתנדבות</span>
+    <span class="Cell_Header">מיקום</span>
+    <span class="Cell_Header">תאריך ושעת התחלה</span>
+    <span class="Cell_Header">תאריך ושעת סיום</span>
+    <span class="Cell_Header"></span>
     </div>
   </div>
 
 </div>
 
-<label id="removeFromList">בוטל בהצלחה!</label>
-<div class="ButtonPlacement">
-  <div class="CreateAndRegEventButton">
-    <button id="btnCancel">בטל אירוע</button>
-    <button>ערוך אירוע</button>
-  </div>
-  <div class="CreateAndRegEventButton">
-    <button id="btnCancel2">בטל השתתפות</button>
-    <button>צפה באירוע</button>
-  </div>
-</div>
+<script src="js/globalFuncs.js"></script>
+
+<script>
+if (!localStorage.getItem('loggedInUser')) {
+      alert('You are not authorized for this screen, You have to login first');
+      logout();
+  }
+</script>
 
 </body>
 </html>

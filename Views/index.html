@@ -6,10 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/globalFuncs.js" defer></script>
-  <script src="../Static/js/index.js" defer></script>
-  <script src="../Static/js/object_list.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/globalFuncs.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <script src="js/object_list.js" defer></script>
 </head>
 
 <body>
@@ -18,30 +18,25 @@
 
 
   <div id="logoIndex">
-    <img class="indexAnimation" src="../Static/img/hands_logo.png" width="400" alt="Web Logo">
+    <img class="indexAnimation" src="img/hands_logo.png" width="400" alt="Web Logo">
   </div>
 
   <div id = "User_Password" >
     <div id="TitleIndex">
       <h1 class="Heading"><span dir = ltr>YourTurn</span></h1>
     </div>
-    <form class="regForm" name="Reg_Form">
 
+    <form action="/signIn" method="post" class="regForm" name="Reg_Form">
       <div class="msgForUser"></div>
-
       <div dir="ltr">
-        <label dir="rtl" for="indexValidUser">שם משתמש:
-          <input type="text" class="UserName" id="indexValidUser">
-        </label>
+        <label for="indexValidUser">שם משתמש:</label>
+          <input type="text" name="userNameInsert" class="UserName" id="indexValidUser" required>
       </div>
-
       <div dir="ltr">
-        <label for="indexValidPass" dir="rtl">סיסמה:
-          <input type="password" class="Password" id="indexValidPass">
-        </label>
+        <label for="indexValidPass" dir="rtl">סיסמה:</label>
+          <input type="password" name="userPassInsert" class="Password" id="indexValidPass" required>
       </div>
       <input type="submit" value="התחבר" class="submit-button">
-
     </form>
   </div>
 
@@ -51,12 +46,15 @@
   <br>
 
   <div id="amuta">
-    <a href="opening_association_user.html"><img class="imgAnimation" src="../Static/img/A%20small%20logo%20association.png" width="150" alt="A small logo association"></a>
+    <a href="http://localhost:3000/opening_association_user"><img class="imgAnimation" src="img/A%20small%20logo%20association.png" width="150" alt="A small logo association"></a>
   </div>
   <div id="mitnadev">
-    <a href="opening_vol_user.html"><img class="imgAnimation" src= "../Static/img/Photo%20of%20a%20volunteer.png" width="150" alt="Photo of a volunteer"></a>
+    <a href="http://localhost:3000/opening_vol_user"><img class="imgAnimation" src= "img/Photo%20of%20a%20volunteer.png" width="150" alt="Photo of a volunteer"></a>
   </div>
 
 </div>
+
+<script src="js/globalFuncs.js"></script>
+
 </body>
 </html>

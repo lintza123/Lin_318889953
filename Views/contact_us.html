@@ -6,46 +6,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/greet_msg.js" defer></script>
-  <script src="../Static/js/globalFuncs.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/greet_msg.js" defer></script>
 </head>
 
 <body>
-<header class="header">
 
-  <label id="greetMsg"></label>
+    <header class="header">
+    
+      <label id="greetMsg"></label>
+    
+      <nav>
+        <img class="returnHomePage" src="img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
+        <button onclick="logout()">התנתק</button>
+        <button class="goToPortal">צפייה בפורטל האישי</button>
+      </nav>
+    
+      <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
+    
+    </header>
+    
+    <div class="TitlePage">
+      <h1 class="Heading">!Contact Us</h1>
+    </div>
+    
+    <div>
+      <label  class="BorderContent">
+        חלק מהמטרה שלנו היא לא רק לעזור לך להיות שם בשביל האחר, אלא להיות שם גם בשבילך!<br>
+        אנחנו זמינים לכל שאלה, בקשה, פנייה, וכן – אפילו הצעה איך לצמוח ולהשתפר! כולנו חלק משרשרת <br>
+        המהפכה ההתנדבותית שאנו מקימים, וכולנו כל הזמן בצמיחה והתחדשות.<br>
+        אנחנו מחכים לשמוע ממך!
+      </label>
+    </div>
+    
+    <br>
+    
+    <div class="ButtonPlacement">
+      <img class="imgAnimation" src="img/phoneus.png" width="85">
+      <img class="imgAnimation" src="img/mailus.png" width="105">
+      <img class="imgAnimation" src="img/facebookus.png" width="85">
+    </div>
 
-  <nav>
-    <img class="returnHomePage" src="../Static/img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
-    <button><a href="index.html">התנתק</a></button>
-    <button class="goToPortal">צפייה בפורטל האישי</button>
-  </nav>
-
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
-
-</header>
-
-<div class="TitlePage">
-  <h1 class="Heading">!Contact Us</h1>
-</div>
-
-<div>
-  <label  class="BorderContent">
-    חלק מהמטרה שלנו היא לא רק לעזור לך להיות שם בשביל האחר, אלא להיות שם גם בשבילך!<br>
-    אנחנו זמינים לכל שאלה, בקשה, פנייה, וכן – אפילו הצעה איך לצמוח ולהשתפר! כולנו חלק משרשרת <br>
-    המהפכה ההתנדבותית שאנו מקימים, וכולנו כל הזמן בצמיחה והתחדשות.<br>
-    אנחנו מחכים לשמוע ממך!
-  </label>
-</div>
-
-<br>
-
-<div class="ButtonPlacement">
-  <img class="imgAnimation" src="../Static/img/phoneus.png" width="85">
-  <img class="imgAnimation" src="../Static/img/mailus.png" width="105">
-  <img class="imgAnimation" src="../Static/img/facebookus.png" width="85">
-</div>
+    <script src="js/globalFuncs.js" defer></script>
 
 </body>
 </html>

@@ -6,10 +6,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Static/css/styles.css">
-  <script src="../Static/js/globalFuncs.js" defer></script>
-  <script src="../Static/js/creating_voluntary_activity_valid.js" defer></script>
-  <script src="../Static/js/greet_msg.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/creating_voluntary_activity_valid.js" defer></script>
+  <script src="js/greet_msg.js" defer></script>
 </head>
 
 <body>
@@ -17,45 +16,41 @@
 <header class="header">
   <label id="greetMsg"></label>
   <nav>
-    <img class="returnHomePage" src="../Static/img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
-    <button><a href="index.html">התנתק</a></button>
+    <img class="returnHomePage" src="img/GoBackToHomePage.png" width="200" alt="GoBackToHomePage">
+    <button onclick="logout()">התנתק</button>
     <button class="goToPortal">צפייה בפורטל האישי</button>
   </nav>
-  <img class="HomePageLogo" src="../Static/img/hands_logo.png" width="150" alt="Web Logo">
+  <img class="HomePageLogo" src="img/hands_logo.png" width="150" alt="Web Logo">
 </header>
 
 <div class="TitlePage">
   <h1 class="Heading">תוביל את המהפכה בדרך שלך!</h1>
 </div>
-
-<form id="EventForm">
+ 
+<div id="EventForm">
 
   <label>שם האירוע* :
-    <input type="text" id="EventTitle">
+    <input type="text" id="EventTitle" required>
     <div class="msg"></div>
-  </label>
-
-  <label>שם היוזם (אופציונלי):
-    <input type="text" id="EventCreator">
   </label>
 
   <label class="date-grid">
     <span>מתאריך *:</span>
-    <input type="date" id="StartDate">
+    <input type="date" id="StartDate" required>
     <span>עד תאריך *:</span>
-    <input type="date" id="EndDate">
+    <input type="date" id="EndDate" required>
     <div id="timeMsg"></div>
   </label>
 
   <label class="date-grid">
     <span>שעת התחלה *:</span>
-    <input type="time" id="StartTime">
+    <input type="time" id="StartTime" required>
     <span>שעת סיום *:</span>
-    <input type="time" id="EndTime">
+    <input type="time" id="EndTime" required>
   </label>
 
   <label>מיקום *:
-    <input type="text" id="Location">
+    <input type="text" id="Location" required>
   </label>
 
   <label class="date-grid">
@@ -75,7 +70,7 @@
   </label>
 
   <label>טלפון ליצירת קשר* :
-    <input type="tel" class="PhoneNumber">
+    <input type="tel" class="PhoneNumber" required>
     <div class="msgPhone"></div>
   </label>
 
@@ -83,8 +78,17 @@
     <br>
     <textarea name="Goal" cols="30" rows="5" placeholder="ספר על המטרה שלך..." id="goalEvent"></textarea>
   </label>
-  <input type="submit"  value="!Post&Impact" class="submit-button">
-</form>
+  <button class="post-btn">שמור</button> 
+</div>
+
+<script src="js/globalFuncs.js"></script>
+
+<script>
+    if (!localStorage.getItem('loggedInUser')) {
+      alert('You are not authorized for this screen, You have to login first');
+      logout();
+  }
+</script>
 
 </body>
 </html>
