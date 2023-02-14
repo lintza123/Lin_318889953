@@ -1,32 +1,3 @@
-//Modules: npm i 
-const express = require('express');
-const path = require('path');
-const mysql = require('mysql2');
-const bodyParser = require('body-parser');
-const CSVToJSON = require('csvtojson');
-
-//Route for Creating Tables
-app.get('/CreateTables', CreateDB.createTables);
-
-//Route for Insert Data
-app.get('/InsertData', CreateDB.insertTables);
-
-//Routes for Showing tables
-app.get('/showTableVol', CreateDB.showTableVol);
-app.get('/showTableAso', CreateDB.showTableAso);
-app.get('/showTableComEvent', CreateDB.showTableComEvent);
-app.get('/showTblVolReg', CreateDB.showTblVolReg);
-
-//Routes for Dropping Tables (This order is important because of the primary key):
-app.get('/dropTblVolReg', CreateDB.dropTblVolReg);
-app.get('/dropTblComEvent', CreateDB.dropTblComEvent);
-app.get('/dropTblAso', CreateDB.dropTblAso);
-app.get('/dropTblVol', CreateDB.dropTblVol);
-
-(May be needed to createTables first, then drop the tables one by one, and then createTables again in order to insertData)
-
-//Creation of DB 'web' and Tables syntax
-
 CREATE DATABASE web;
 
 USE web;
